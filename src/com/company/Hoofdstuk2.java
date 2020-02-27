@@ -11,14 +11,14 @@ public class Hoofdstuk2 extends Applet {
         Scanner scanner = new Scanner(System.in);
 
         // Opdracht 2.1
-        System.out.print("Opdracht 2.1" + "\n");
+        System.out.println("Opdracht 2.1\n");
         System.out.print("Type het aantal mijlen: ");
         double mijlen = scanner.nextDouble();
         double kilometers = mijlen * 1.6;
         System.out.println(mijlen + " mijlen is " + kilometers + " kilometers" + "\n");
 
         // Opdracht 2.2
-        System.out.print("Opdracht 2.2" + "\n");
+        System.out.println("Opdracht 2.2\n");
         System.out.print("Hoe out ben jij in jaren?");
         int jaren = scanner.nextInt();
         System.out.print("Hoe veel maanden komen erbij?");
@@ -27,15 +27,43 @@ public class Hoofdstuk2 extends Applet {
         System.out.println("Dan ben je nu ongeveer " + min + " minuten oud " + "\n");
 
         //Opdracht 2.3
-        System.out.print("Opdracht 2.3" + "\n");
+        System.out.println("Opdracht 2.3\n");
         System.out.print("Typ het startbedrag:");
-        int start = scanner.nextInt();
+        double  startbedrag = scanner.nextDouble();
         System.out.print("Typ het rentepercentage:");
-        int rente = scanner.nextInt();
+        double rentepercentage = scanner.nextDouble();
+        double rentebedrag = rentepercentage / 100 * startbedrag;
+        double totaalbedrag = startbedrag + rentebedrag;
+        System.out.println("De rente is " + rentebedrag + " en het totaalbedrag is" + totaalbedrag + "\n");
 
         //Opdracht 2.4
-        System.out.print("Opdracht 2.4" + "\n");
-        System.out.println();
-    }
+        System.out.println("Opdracht 2.4\n");
+        System.out.print("Typ een getal tussen 10 en 100:");
+        int userinput = scanner.nextInt();
+        int buurman = userinput - 2;
+        int buurman2 = userinput - 1;
+        int buurman3 = userinput;
+        int buurman4 = userinput + 1;
+        int buurman5= userinput + 2;
+        System.out.println("De vijf getallen zijn " + buurman + "-" + buurman2 + "-" + buurman3 + "-" + buurman4 + "-" + buurman5 + "\n");
+
+        //Opdracht 2.5
+        System.out.println("Opdracht 2.5\n");
+        System.out.print("Type een getal tussen de 0 en 1000: ");
+        int userInput = scanner.nextInt();
+
+        int lastDigit = userInput % 10;
+        userInput = userInput / 10;
+
+        int middleDigit= userInput % 10;
+        userInput = userInput / 10;
+
+        int firstDigit = userInput;
+
+        int product = firstDigit * middleDigit * lastDigit;
+
+        System.out.println("De vermenongvuldiging van de cijfers luidt: " + firstDigit + " x " + middleDigit + " x " + lastDigit + " = " + product);
+
+ }
 
 }
